@@ -1,0 +1,92 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _jsxFileName = "D:\\Work\\MyProjects\\Courses\\KeeperApp\\src\\components\\CreateArea.jsx", _s = $RefreshSig$();
+  function CreateArea(props) {
+    _s();
+    const [note, setNote] = _react.useState({
+      title: "",
+      content: ""
+    });
+    function handleChange(event) {
+      const {name, value} = event.target;
+      setNote(prevNote => {
+        return {
+          ...prevNote,
+          [name]: value
+        };
+      });
+    }
+    function submitNote(event) {
+      props.onAdd(note);
+      setNote({
+        title: "",
+        content: ""
+      });
+      event.preventDefault();
+    }
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30,
+          columnNumber: 5
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("form", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 31,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("input", {
+        name: "title",
+        onChange: handleChange,
+        value: note.title,
+        placeholder: "Title",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32,
+          columnNumber: 9
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("textarea", {
+        name: "content",
+        onChange: handleChange,
+        value: note.content,
+        placeholder: "Take a note...",
+        rows: "3",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38,
+          columnNumber: 9
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("button", {
+        onClick: submitNote,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 45,
+          columnNumber: 9
+        }
+      }, "Add")))
+    );
+  }
+  _s(CreateArea, "hkbdeIwI5y0iiwfSPR0mcnx9Oe4=");
+  _c = CreateArea;
+  exports.default = CreateArea;
+  var _c;
+  $RefreshReg$(_c, "CreateArea");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

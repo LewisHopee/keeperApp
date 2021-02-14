@@ -1,0 +1,57 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _jsxFileName = "D:\\Work\\MyProjects\\Courses\\KeeperApp\\src\\components\\Note.jsx";
+  function Note(props) {
+    function handleClick() {
+      props.onDelete(props.id);
+    }
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "note",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 9,
+          columnNumber: 5
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10,
+          columnNumber: 7
+        }
+      }, props.title), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 11,
+          columnNumber: 7
+        }
+      }, props.content), /*#__PURE__*/_reactDefault.default.createElement("button", {
+        onClick: handleClick,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12,
+          columnNumber: 7
+        }
+      }, "DELETE"))
+    );
+  }
+  _c = Note;
+  exports.default = Note;
+  var _c;
+  $RefreshReg$(_c, "Note");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
